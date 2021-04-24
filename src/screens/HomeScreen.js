@@ -6,19 +6,19 @@ import products from '../../src/products'
 
 const HomeScreen = () => {
     console.log("Home Screen Function invoked on load");
-    /* const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         console.log("Home Screen Function invoked on load");
         const fetchProducts = async () => {
-            // const { data } = await axios.get('https://fiu2hm0bya.execute-api.us-east-1.amazonaws.com/dev/api/products');
-            const { data } = await axios.get('/api/products');
+            const { data } = await axios.get('https://fiu2hm0bya.execute-api.us-east-1.amazonaws.com/dev/api/products');
+            //const { data } = await axios.get('/api/products');
             console.log('All Products ', data);
             setProducts(data);
         }
 
         fetchProducts()
-    }, []) */
+    }, [])
 
     return (
         <>

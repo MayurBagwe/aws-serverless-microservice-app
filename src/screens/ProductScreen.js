@@ -6,20 +6,20 @@ import axios from 'axios';
 import products from '../../src/products'
 
 const ProductScreen = ({ match }) => {
-    //const [product, setProduct] = useState({})
-    const product = products.find((p) => p._id === match.params.id);
+    const [product, setProduct] = useState({})
+    //const product = products.find((p) => p._id === match.params.id);
 
-    /*  useEffect(() => {
- 
-         const fetchProduct = async () => {
-             //const { data } = await axios.get(`https://fiu2hm0bya.execute-api.us-east-1.amazonaws.com/dev/api/products/${match.params.id}`);
-             const { data } = await axios.get(`api/products/${match.params.id}`);
-             console.log("Single product ", data);
-             setProduct(data);
-         }
- 
-         fetchProduct()
-     }, [match]) */
+    useEffect(() => {
+
+        const fetchProduct = async () => {
+            const { data } = await axios.get(`https://fiu2hm0bya.execute-api.us-east-1.amazonaws.com/dev/api/products/${match.params.id}`);
+            //const { data } = await axios.get(`api/products/${match.params.id}`);
+            console.log("Single product ", data);
+            setProduct(data);
+        }
+
+        fetchProduct()
+    }, [match])
 
     return (
         <>
