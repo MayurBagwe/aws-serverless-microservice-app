@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
@@ -10,14 +10,15 @@ import { listProducts } from '../actions/productsActions'
 const HomeScreen = () => {
     console.log("Home Screen Function invoked on load");
     const dispatch = useDispatch()
+    let productsArray = [];
     const productList = useSelector(state => state.productList)
     const { loading, error, products } = productList
     useEffect(() => {
         dispatch(listProducts())
     }, [dispatch])
-
+    const returnedArray = Array.from(products)
     //console.log("Products Loaded " + productList.products[0]);
-    const productsArray = products;
+    productsArray = returnedArray;
     return (
         <>
             <h1>Latest Products</h1>
