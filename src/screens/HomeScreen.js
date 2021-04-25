@@ -18,7 +18,7 @@ const HomeScreen = () => {
     }, [dispatch])
     const returnedArray = Array.from(products)
     //console.log("Products Loaded " + productList.products[0]);
-    productsArray = returnedArray;
+    productsArray = products;
     return (
         <>
             <h1>Latest Products</h1>
