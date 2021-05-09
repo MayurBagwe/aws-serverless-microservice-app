@@ -60,7 +60,7 @@ export const productDetailsReducer = (
     }
 }
 
-/*
+
 
 export const productDeleteReducer = (state = {}, action) => {
     switch (action.type) {
@@ -131,4 +131,4 @@ export const productTopRatedReducer = (state = { products: [] }, action) => {
         default:
             return state
     }
-} */
+}
