@@ -21,7 +21,11 @@ const Header = () => {
             <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>ProShop</Navbar.Brand>
+                        <img src="https://arweb.sdsu.edu/es/admissions/images/home/logo_sdsu.png" alt="San Diego State University" title="Go to SDSU home page" name="logo_sdsu" width="227" height="46" id="logo_sdsu" />
+                    </LinkContainer>
+                    <LinkContainer to='/' style={{ marginLeft: "20px" }}>
+
+                        <Navbar.Brand >SDSU E-Store</Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls='basic-navbar-nav' />
                     <Navbar.Collapse id='basic-navbar-nav'>
